@@ -1,5 +1,5 @@
 #include <iostream>
-void ltrim(std::string& str) {
+void rtrim(std::string& str) {
     str.erase(std::find_if(str.rbegin(), str.rend(), [](unsigned char ch) {
             return !std::isspace(ch);
         }).base(), str.end());
@@ -8,6 +8,6 @@ void ltrim(std::string& str) {
 int main(){
     std::string name;
     name = "DRAKARIS     ";
-    ltrim(name);
+    rtrim(name);
     std::cout << name << "*" << std::endl;
 }
